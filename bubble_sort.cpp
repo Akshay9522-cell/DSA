@@ -34,32 +34,23 @@
 #include<iostream>
 using namespace std;
 
- void bubbleSort(int arr[],int n){
-      
-      for(int i=0;i<n;i++){
-            bool swapped=false;
-        for(int j=0;j<n-i;j++){
+ void bSort(int arr[],int n){
 
-           if(arr[j]>arr[j+1]){
-         
-            swap(arr[j],arr[j+1]);
-            swapped=true;
-           }
-           
-        }
-       
-         if(swapped==false){
-           break;
-        }
-         cout<<arr[i];
+   for(int i=0;i<n;i++){
+      for(int j=0;j<n-i-1;j++){
+         if(arr[j]>arr[j+1]){
+               swap(arr[j],arr[j+1]);
+         }
+      
       }
      
+      cout<<arr[i];
+   }
  }
 
 int main(){
-   int arr[]={6,2,8,4,10};
-   int n=sizeof(arr)/sizeof(arr[0]);
+    int arr[]={4,6,4,6,7,8,99};
+    int n=sizeof(arr)/sizeof(arr[0]);
 
-   bubbleSort(arr,n);
+    bSort(arr,n);
 }
-
