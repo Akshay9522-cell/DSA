@@ -76,29 +76,59 @@
 
 // }
 
+// #include<iostream>
+// using namespace std;
+
+//   void selectionSort(int arr[],int n){
+
+//       for(int i=0;i<n;i++){
+//          int SI=i;
+//          for(int j=i+1;j<n;j++){
+//             if(arr[j]<arr[SI]){
+//                 SI=j;
+//             }
+//          }
+//          swap(arr[i],arr[SI]);
+//       }
+//   }
+
+
+// int main(){
+//      int arr[]={5,4,6,7,9,32,1};
+//      int n=sizeof(arr)/sizeof(arr[0]);
+
+//      selectionSort(arr,n);
+//      for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//      }
+// }
+
+
 #include<iostream>
 using namespace std;
 
-  void selectionSort(int arr[],int n){
+ void selctionSort(int arr[],int n){
+      
+        for(int i=0;i<n;i++){
+          int key=i;
 
-      for(int i=0;i<n;i++){
-         int SI=i;
-         for(int j=i+1;j<n;j++){
-            if(arr[j]<arr[SI]){
-                SI=j;
-            }
-         }
-         swap(arr[i],arr[SI]);
-      }
-  }
-
+          for(int j=i+1;j<n;j++){
+              if(arr[j]<arr[key]){
+                 key=j;
+              }
+          }
+          swap(arr[i],arr[key]);
+        }
+ }
 
 int main(){
-     int arr[]={5,4,6,7,9,32,1};
-     int n=sizeof(arr)/sizeof(arr[0]);
 
-     selectionSort(arr,n);
-     for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-     }
+  int arr[]={5,4,6,7,9,32,1};
+  int n=sizeof(arr)/sizeof(arr[0]);
+
+   selctionSort(arr,n);
+   for(int i=0;i<n;i++){
+      cout<<arr[i];
+   }
+return 0;
 }
